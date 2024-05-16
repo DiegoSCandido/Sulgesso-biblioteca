@@ -31,27 +31,59 @@
 
     <main class="container">
         <section class="bem-vindos">
-            <span>Bem Vindos a</span>
+            <span>Bem Vindos à</span>
             <h1>BIBLIOTECA SULGESSO</h1>
             <p>Uma biblioteca de livros fisicos para todos os colaboradores.<br>
                 Nela você vai encontrar, um acervo que vão de livros técnicos até livros infantis.
             </p>
         </section>
 
-        <section class="slide">
-            <img src="./img/Logo Sulgesso SA Horizontal_clipdrop-background-removal (1).png" alt="teste">
+        <section class="slider">
+            
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+            
+                <div class="slide first">
+                    <img src="./img/Biblioteca1.jpg" alt="foto biblioteca1">
+                </div>
+                <div class="slide">
+                    <img src="./img/Biblioteca2.jpg" alt="foto biblioteca2">
+                </div>
+                <div class="slide">
+                    <img src="./img/Biblioteca3.jpg" alt="foto biblioteca3">
+                </div>
+                <div class="slide">
+                    <img src="./img/Biblioteca4.jpg" alt="foto biblioteca4">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+
+
         </section>
     </main>
 
     <footer class="rodape">
-        <!-- <img src="./img/SULGESSO_2D branco .png" alt="logo sulgesso branca" class="logo-sulgesso-br">
-        <img src="./img/logo-bb.png" alt="logo biblioteca" class="logo-bibloteca">
-        <img src="./img/ESG BRANCA.png" alt="logo esg branca" class="logo-esg-br"> -->
-            <img src="./img/rodape.png" alt="">
+        <img src="./img/rodape.png" alt="">
     </footer>
 
 
 <!-- Scrits Javascript -->
-    <script src="./assets/script.js"></script>
+    <script src="./assets/js/home.js"></script>
 </body>
 </html>
