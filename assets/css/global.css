@@ -33,6 +33,7 @@ header .links a {
 header .links a:hover {
     color: #009f4f;
     text-decoration: underline;
+    transition: 0.5s;
 }
 
 header button {
