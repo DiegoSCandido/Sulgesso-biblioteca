@@ -4,49 +4,6 @@
     font-family: 'Poppins', sans-serif;
 }
   
-body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-header img {
-    max-width: 250px;
-}
-
-header .links a {
-    margin: auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-weight: bold;
-    color: #000000;
-}
-
-header .links a:hover {
-    color: #009f4f;
-    text-decoration: underline;
-}
-
-header button {
-padding: 0.8rem 1rem;
-cursor: pointer;
-border: none;
-border-radius: 0.5rem;
-font-weight: 500;
-background: none;
-color: #fff;
-font-size: 0.9rem;
-background-color: #009f4f;
-}
-
 main .bem-vindos {
     display: flex;
     flex-direction: column;
@@ -73,15 +30,7 @@ main .bem-vindos p {
 
 .bem-vindos {
     flex: 2;
-    padding: 5px;
-}
-
-.slide {
-    flex: 2;
-    padding: 5px;
-}
-
-.bem-vindos{
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
@@ -89,7 +38,9 @@ main .bem-vindos p {
 }
 
 .slide {
-    display: block;
+    flex: 2;
+    padding: 0;
+    display: flex;
     max-width: 100%;
     height: auto;
     flex-direction: column;
@@ -102,12 +53,3 @@ main .bem-vindos p {
     height: auto;
 }
 
-footer {
-    background-color: #1aa04e;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-footer img {
-    max-width: 100%;
-}
