@@ -77,6 +77,22 @@ footer img {
 
 /* Smartphones e Tablets */
 @media (max-width: 767px) {
+    header {
+        flex-direction: column;
+    }
+    
+    #burguer {
+        display: block;
+        padding: 15px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .button {
+        padding: 15px;
+    }
 
 }
 
@@ -97,8 +113,5 @@ footer img {
     .button {
         padding: 15px;
     }
-
-
-
 
 }
