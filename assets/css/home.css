@@ -84,7 +84,7 @@ main .bem-vindos p {
 }
 
 .manual-btn:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 2.5rem;
 }
      
 .manual-btn:hover {
@@ -145,25 +145,26 @@ main .bem-vindos p {
 
 .social {
     text-align: center;
+    padding: 20px;
+}
+
+.icon {
+    max-width: 80px;
+    max-height: 80px;
+    padding: 20px;
 }
 
 .site {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    padding: 20px;
 }
 
 .site:hover {
     text-decoration: underline;
     color: #009f4f;
     transition: 0.5s;
-}
-
-.icon {
-    max-width: 80px;
-    max-height: 80px;
-    margin-top: 50px;
-    padding: 20px;
 }
 
 @media (max-width: 767px) {
@@ -177,6 +178,20 @@ main .bem-vindos p {
     .container {
         display: flex;
         flex-direction: column;
+    }
+
+    .bem-vindos {
+        max-width: 67.5rem;
+        max-height: auto;
+    }
+
+    .bem-vindos h1 {
+        font-size: 3rem;
+    }
+
+    .slider {
+        max-width: 67.5rem;
+        max-height: auto;
     }
 
 }
