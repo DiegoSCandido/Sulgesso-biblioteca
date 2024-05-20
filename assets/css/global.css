@@ -16,10 +16,15 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 2rem;
 }
 
 header img {
     max-width: 250px;
+}
+
+#burguer {
+    display: none;
 }
 
 header .links a {
@@ -62,4 +67,38 @@ footer {
 
 footer img {
     max-width: 100%;
+}
+
+/* Celulares primeira geracao*/
+@media (max-width: 767px) {
+
+}
+
+
+/* Smartphones e Tablets */
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        flex-direction: column;
+    }
+    
+    #burguer {
+        display: block;
+        padding: 15px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .button {
+        padding: 15px;
+    }
+
+
+
+
 }
