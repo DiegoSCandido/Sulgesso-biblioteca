@@ -20,9 +20,6 @@
             <img src="./img/Logo Sulgesso SA Horizontal.png" class="img-logo" alt="Logo SulGesso">
         </div>
 
-        <!-- Menu burguer -->
-        <span class="material-symbols-outlined" id="burguer">menu</span>
-
         <div class="links">
             <a href="./index.html">Home</a>
             <a href="./catalogo.html">Catalogo Online</a>
@@ -32,6 +29,16 @@
         <div class="button">
             <button>Área Restrita</button>
         </div>
+
+        <!-- Menu burguer -->
+        <span class="material-symbols-outlined" id="burguer" onclick="toggleMenu()">menu</span>
+        <div class="links-menu">
+            <a href="./index.html">Home</a>
+            <a href="./catalogo.html">Catalogo Online</a>
+            <a href="./reserva.html">Reserva</a>
+            <a href="./contato.html">Contato</a>
+        </div>
+
     </header>
 
     <main class="container">
@@ -98,6 +105,12 @@
 
 
 <!-- Scrits Javascript -->
-    <script src="./assets/js/home.js"></script>
+    <!-- <script src="./assets/js/home.js"></script> -->
+    <script>
+    function toggleMenu() {
+        const menu = document.querySelector('.links-menu');
+        menu.classList.toggle('open');
+    }
+    </script>
 </body>
 </html>
