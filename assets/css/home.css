@@ -171,6 +171,7 @@ main .bem-vindos p {
     .container {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
@@ -181,7 +182,8 @@ main .bem-vindos p {
     }
 
     .bem-vindos {
-        max-width: 67.5rem;
+        flex-wrap: wrap;
+        max-width: 100%;
         max-height: auto;
     }
 
@@ -190,7 +192,7 @@ main .bem-vindos p {
     }
 
     .slider {
-        max-width: 67.5rem;
+        max-width: 100%;
         max-height: auto;
     }
 
