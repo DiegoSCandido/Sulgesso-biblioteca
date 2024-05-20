@@ -1,5 +1,12 @@
+// função menu toggle
+    function toggleMenu() {
+        const menu = document.querySelector('.links-menu');
+        menu.classList.toggle('open');
+    }
 
 
+
+// Função slider
 let count = 1;
 document.getElementById("radio1").checked = true; 
 
