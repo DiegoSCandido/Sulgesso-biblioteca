@@ -4,7 +4,8 @@
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
 }
-  
+
+
 main .bem-vindos {
     display: flex;
     flex-direction: column;
@@ -38,6 +39,7 @@ main .bem-vindos p {
     justify-content:space-between;
     align-items: center;
 }
+
 
 .social {
     text-align: center;

@@ -14,17 +14,63 @@ body {
 
 h1 {
     text-align: center;
+    font-weight: bold;
 }
 
-.form-group {
+.contact-form {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     height: calc(100vh - 80%);
     padding: 0 100px;
+    margin: 30px;
 
 }
+
+input {
+    width: 80%;
+    height: 30px;
+    border-radius: .5rem;
+    border-width: 1px;
+}
+
+textarea {
+    width: 80%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+}
+
+label {
+    font-weight: bold;
+}
+label:hover{
+    color: #009f4f;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+#form-btn {
+    margin: 20px;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background: none;
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: #009f4f;
+    transition: 0.5s;
+}
+
+#form-btn:hover {
+    background-color: #009f509a;
+}
+
+
+
+
 
 /* Celulares primeira geracao*/
 @media (max-width: 767px) {
