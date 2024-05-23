@@ -12,6 +12,20 @@ body {
     padding: 0;
 }
 
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: calc(100vh - 80%);
+    padding: 0 100px;
+
+}
+
 /* Celulares primeira geracao*/
 @media (max-width: 767px) {
 
