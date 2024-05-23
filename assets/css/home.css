@@ -14,7 +14,7 @@ main .bem-vindos {
 }
 
 main .bem-vindos h1 {
-    font-size: 6rem;
+    font-size: 96px;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -37,8 +37,6 @@ main .bem-vindos p {
     justify-content:space-between;
     align-items: center;
 }
-
-
 
 .social {
     text-align: center;
@@ -69,6 +67,10 @@ main .bem-vindos p {
         display: flex;
         flex-direction: column;
     }
+
+    main .bem-vindos h1 {
+        font-size: 80px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1080px) {
@@ -82,8 +84,8 @@ main .bem-vindos p {
         max-height: auto;
     }
 
-    .bem-vindos h1 {
-        font-size: 3rem;
+    main .bem-vindos h1 {
+        font-size: 80px;
     }
 
     .slider {
