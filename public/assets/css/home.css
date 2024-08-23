@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+
+main .bem-vindos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+main .bem-vindos h1 {
+    font-size: 96px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+main .bem-vindos p {
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.bem-vindos {
+    flex: 2;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+.social {
+    text-align: center;
+    padding: 20px;
+}
+
+.icon {
+    max-width: 80px;
+    max-height: 80px;
+    padding: 20px;
+}
+
+.site {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.site:hover {
+    text-decoration: underline;
+    color: #009f4f;
+    transition: 0.5s;
+}
+
+@media (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .bem-vindos h1 {
+        font-size: 45px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bem-vindos {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    main .bem-vindos h1 {
+        font-size: 45px;
+    }
+
+    .slider {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+}
+  
