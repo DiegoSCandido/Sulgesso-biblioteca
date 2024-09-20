@@ -1,9 +1,10 @@
 const express = require('express');
+const session = require('express-session')
 const mongoose = require('mongoose');
 const multer = require('multer');
 const path = require('path');
 const Book = require('./models/Book');  // Certifique-se de criar o arquivo models/Book.js
-const session = require('express-session');
+
 const app = express();
 
 // Substitua pelos seus detalhes
@@ -68,8 +69,66 @@ app.get('/books', async (req, res) => {
     }
 });
 
-// Iniciando o servidor
+
+// criando acessso a area restrita 
+// Configurar o middleware para lidar com formulários
+app.use(express.urlencoded({ extended: true }));
+
+// Configurar o middleware de sessões
+app.use(session({
+  secret: '@#SulGesso05550admin', // Use uma string aleatória e forte
+  resave: false, // Não salvar a sessão se nada for modificado
+  saveUninitialized: false, // Não criar sessões até que algo seja armazenado
+  cookie: { secure: true } // Defina como true se estiver usando HTTPS
+}));
+
+// Rota para exibir a página de login do administrador
+app.get('/admin-login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'admin-login.html'));
+});
+
+// Verificar senha e iniciar a sessão
+app.post('/admin-login', (req, res) => {
+  const { password } = req.body;
+  
+  // Defina a senha do administrador aqui
+  const adminPassword = 'senha123';
+  
+  if (password === adminPassword) {
+    // Se a senha estiver correta, iniciar a sessão
+    req.session.isAuthenticated = true;
+    res.redirect('/admin-dashboard.html');
+  } else {
+    res.send('Senha incorreta. <a href="/admin-login">Tente novamente</a>');
+  }
+});
+
+// Middleware para proteger as rotas
+function isAuthenticated(req, res, next) {
+  if (req.session.isAuthenticated) {
+    return next(); // O usuário está autenticado, continuar
+  } else {
+    res.redirect('/admin-login'); // Redirecionar para a página de login
+  }
+}
+
+// Rota para o painel de administração (protegida)
+app.get('/admin-dashboard', isAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, 'public','admin-dashboard.html'));
+});
+
+// Rota para logout
+app.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.send('Erro ao encerrar sessão.');
+    }
+    res.redirect('/admin-login.html');
+  });
+});
+
+// Iniciar o servidor
 app.listen(3000, () => {
-    console.log('Servidor rodando na porta 3000');
+  console.log('Servidor rodando na porta 3000');
 });
 
